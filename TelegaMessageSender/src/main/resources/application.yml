@@ -1,0 +1,16 @@
+server:
+  port: 0
+spring:
+  application:
+    name: telega-message-sender-service
+  cloud:
+    stream:
+      bindings:
+        messageEventConsumer-in-0:
+          destination: tmessage
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:kafka:9094}
+
+telegram:
+  uri:
+    request: https://api.telegram.org/bot
