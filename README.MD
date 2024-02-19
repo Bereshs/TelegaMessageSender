@@ -1,18 +1,18 @@
-# Sender message from Apache Kafka to Telegram bot
+# TelegaMessgaeSender
 
-project contains following modules
+Проект включаетв себя следующие модули
 1. Apache Kafka consumer
-2. Telegram bot message sender (by get request)
+2. Telegram bot message sender (отправка происодит посредствам GET запроса)
 
-## Environment
-To run project add 
+## Переменные
+Для запуска проекта добавьте в application.yml строку 
 ```
 telegram.bot.token=<YOU TOKEN> 
+server.kafka.bootstrap-servers=<YOU KAFKA SERVER ADDRESS>
 ```
-in application.yml
 
-## Basic interactions
-You mast send in Apache Kafka group tmessage with body:
+## Интеграия с сервисами
+Для отправки сообщений телеграм боту отправьте в группу tmessage следующее сообщение:
 ```
 {
    groip_id: <UserId>,
@@ -20,5 +20,6 @@ You mast send in Apache Kafka group tmessage with body:
    text:  <Text message>
 }
 ```
-for sending telegram message.
+## Зависимости:
+- Apache kafka, zookeper
 
