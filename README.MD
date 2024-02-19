@@ -1,13 +1,12 @@
 # TelegaMessgaeSender
 
-Проект включаетв себя следующие модули
-1. Apache Kafka consumer
+Проект включает в себя следующие модули:
+1. Apache Kafka consumer (потребитель сообщений kafka)
 2. Telegram bot message sender (отправка происодит посредствам GET запроса)
 
 ## Переменные
-Для запуска проекта добавьте в application.yml строку 
+Для запуска проекта добавьте в application.properties строку 
 ```
-telegram.bot.token=<YOU TOKEN> 
 server.kafka.bootstrap-servers=<YOU KAFKA SERVER ADDRESS>
 ```
 
